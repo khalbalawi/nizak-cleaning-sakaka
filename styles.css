@@ -149,6 +149,14 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .field input, .field select { width: 100%; height: 50px; padding: 0 14px; color: var(--navy); background: #fff; border: 1px solid #cad6e7; border-radius: 10px; outline: 0; transition: .2s; }
 .field input:focus, .field select:focus { border-color: var(--blue); box-shadow: 0 0 0 4px rgba(13,110,253,.1); }
 .field input::placeholder { color: #9aa7b9; }
+.location-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 9px; }
+.location-row .btn-location { min-height: 50px; padding: 0 18px; color: var(--blue); background: #edf5ff; border-color: #a9c9f8; white-space: nowrap; font-family: inherit; }
+.location-row .btn-location:hover { background: #dcecff; border-color: var(--blue); box-shadow: 0 8px 18px rgba(13,110,253,.12); }
+.location-row .btn-location:disabled { cursor: wait; opacity: .7; transform: none; }
+.location-field small { display: block; margin-top: 7px; color: var(--muted); font-size: .74rem; }
+.location-status { display: none; margin: 7px 0 0; padding: 8px 11px; color: #146c43; background: #e9f8f0; border-radius: 8px; font-size: .76rem; }
+.location-status.show { display: block; }
+.location-status.error { color: #a31616; background: #fff1f1; }
 fieldset.field { margin: 0; padding: 0; border: 0; }
 .check-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 9px; }
 .check-grid label { margin: 0; }
@@ -251,6 +259,8 @@ fieldset.field { margin: 0; padding: 0; border: 0; }
   .faq-grid { gap: 24px; }
   .faq-intro { text-align: center; }
   .booking-form { grid-template-columns: 1fr; padding: 20px; gap: 15px; }
+  .location-row { grid-template-columns: 1fr; }
+  .location-row .btn-location { width: 100%; }
   .field-full { grid-column: auto; }
   .check-grid { grid-template-columns: repeat(2, 1fr); }
   .form-error { grid-column: auto; }

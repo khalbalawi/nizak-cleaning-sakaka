@@ -7,7 +7,7 @@
     <meta name="description" content="مؤسسة نيزك أعمال للنظافة والخدمات المتكاملة في سكاكا والجوف. تنظيف مجالس وسجاد، جلي أرضيات وتنظيف شامل بأسعار واضحة." />
     <meta property="og:title" content="نيزك أعمال للنظافة | سكاكا والجوف" />
     <meta property="og:description" content="نظافة وجلي احترافي في سكاكا والجوف. احجز خدمتك مباشرة عبر واتساب." />
-    <meta property="og:image" content="hero-cleaning.jpg" />
+    <meta property="og:image" content="assets/hero-cleaning.jpg" />
     <title>نيزك أعمال للنظافة | سكاكا والجوف</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -67,7 +67,7 @@
             </div>
           </div>
           <figure class="hero-media reveal">
-            <img src="hero-cleaning.jpg" alt="فني ينظف كنب مجلس باستخدام جهاز تنظيف متخصص" width="1792" height="1024" fetchpriority="high" />
+            <img src="assets/hero-cleaning.jpg" alt="فني ينظف كنب مجلس باستخدام جهاز تنظيف متخصص" width="1792" height="1024" fetchpriority="high" />
             <figcaption><svg class="icon"><use href="#i-pin" /></svg><span><strong>نصل إليك أينما كنت</strong>داخل سكاكا والجوف والمناطق المجاورة</span></figcaption>
           </figure>
         </div>
@@ -121,8 +121,8 @@
         <div class="container results-grid">
           <div class="results-copy reveal"><span class="section-number">03</span><h2>نتائج تتحدث<br />عن نفسها</h2><p>حرّك المؤشر لمشاهدة الفرق الذي تصنعه معداتنا المتخصصة وعنايتنا بالتفاصيل.</p><a href="#booking" class="text-link">اطلب تقييم خدمتك <svg class="icon"><use href="#i-arrow" /></svg></a></div>
           <div class="comparison reveal" style="--position: 50%">
-            <img class="comparison-after" src="sofa-after.jpg" alt="الكنب بعد التنظيف" loading="lazy" />
-            <div class="comparison-before"><img src="sofa-before.jpg" alt="الكنب قبل التنظيف" loading="lazy" /></div>
+            <img class="comparison-after" src="assets/sofa-after.jpg" alt="الكنب بعد التنظيف" loading="lazy" />
+            <div class="comparison-before"><img src="assets/sofa-before.jpg" alt="الكنب قبل التنظيف" loading="lazy" /></div>
             <span class="label label-after">بعد</span><span class="label label-before">قبل</span>
             <div class="comparison-line"><span>↔</span></div>
             <input type="range" min="5" max="95" value="50" aria-label="مقارنة حالة الكنب قبل وبعد التنظيف" />
@@ -150,6 +150,15 @@
               <div class="field"><label for="name">الاسم الكريم <b>*</b></label><input id="name" name="name" type="text" autocomplete="name" placeholder="أدخل اسمك الكريم" required /></div>
               <div class="field"><label for="phone">رقم الجوال <b>*</b></label><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="05xxxxxxxx" pattern="^05[0-9]{8}$" required /></div>
               <div class="field field-full"><label for="area">الحي / المنطقة <b>*</b></label><input id="area" name="area" type="text" placeholder="مثال: حي الشلهوب، سكاكا" required /></div>
+              <div class="field field-full location-field">
+                <label for="location">موقع المنزل على الخريطة</label>
+                <div class="location-row">
+                  <input id="location" name="location" type="url" inputmode="url" dir="ltr" placeholder="الصق رابط Google Maps هنا" />
+                  <button class="btn btn-location" id="get-location" type="button"><svg class="icon"><use href="#i-pin" /></svg> تحديد موقعي الحالي</button>
+                </div>
+                <small>يمكنك تحديد موقعك تلقائيًا أو لصق رابط الموقع من Google Maps.</small>
+                <p class="location-status" id="location-status" role="status" aria-live="polite"></p>
+              </div>
               <fieldset class="field field-full"><legend>اختر الخدمة المطلوبة <b>*</b></legend><div class="check-grid">
                 <label><input type="checkbox" name="service" value="تنظيف مجالس بالمتر" /><span><svg class="icon"><use href="#i-sofa" /></svg> تنظيف مجالس بالمتر</span></label>
                 <label><input type="checkbox" name="service" value="جلي أرضيات" /><span><svg class="icon"><use href="#i-sparkles" /></svg> جلي أرضيات</span></label>
