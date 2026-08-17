@@ -34,7 +34,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .coverage-inner .icon { width: 17px; }
 .site-header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.94); border-bottom: 1px solid rgba(220,229,241,.8); backdrop-filter: blur(14px); }
 .header-inner { min-height: 86px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
-.brand { display: inline-flex; align-items: center; gap: 10px; min-width: 220px; }
+.brand { display: inline-flex; align-items: center; min-width: 132px; }
+.brand-logo { display: block; width: auto; height: 68px; object-fit: contain; }
 .brand-mark { width: 48px; height: 48px; color: var(--blue); fill: currentColor; flex: none; }
 .brand span { display: flex; flex-direction: column; line-height: 1.35; }
 .brand strong { font-size: 1.28rem; letter-spacing: -.02em; }
@@ -189,7 +190,8 @@ fieldset.field { margin: 0; padding: 0; border: 0; }
 
 .footer { color: #cbd6e8; background: var(--navy); padding: 64px 0 20px; }
 .footer-grid { display: grid; grid-template-columns: 1.5fr repeat(3, 1fr); gap: 54px; }
-.brand-light { color: #fff; }.brand-light .brand-mark { color: #65a3ff; }.brand-light small { color: #aebdd2; }
+.brand-light { color: #fff; }
+.brand-light .brand-logo { width: 168px; height: auto; padding: 8px; background: #fff; border-radius: 14px; }
 .footer-brand p { max-width: 300px; color: #91a2bc; font-size: .86rem; }
 .footer-grid h3 { margin: 5px 0 17px; color: #fff; font-size: .94rem; }
 .footer-grid > div:not(:first-child) > a, .footer-grid > div:not(:first-child) > span { display: block; margin: 8px 0; font-size: .83rem; }
@@ -232,6 +234,7 @@ fieldset.field { margin: 0; padding: 0; border: 0; }
   .coverage-inner > a { display: none; }
   .header-inner { min-height: 72px; gap: 10px; }
   .brand { min-width: 0; gap: 7px; }
+  .brand-logo { height: 54px; }
   .brand-mark { width: 40px; height: 40px; }
   .brand strong { font-size: 1.05rem; }
   .brand small { font-size: .58rem; }
@@ -280,6 +283,7 @@ fieldset.field { margin: 0; padding: 0; border: 0; }
   .footer { padding-bottom: 92px; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px 20px; }
   .footer-brand { grid-column: 1 / -1; }
+  .brand-light .brand-logo { width: 150px; height: auto; }
   .footer-grid > div:last-child { grid-column: 2; }
   .footer-bottom { display: block; text-align: center; }
   .footer-bottom a { display: inline-block; margin-top: 10px; }
